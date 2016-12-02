@@ -29,6 +29,12 @@ def find_position(page, keywords)
 	
 end
 
+
+def find_all_asin
+	
+end
+
+
 def position_in_pages(keywords)
 	(1..20).each do |page|
 		pos = find_position(page, keywords)
@@ -44,6 +50,6 @@ all_keywords = ARGV.drop(1)
 
 all_keywords.each do |keyword|
 	rows = [keyword, position_in_pages(keyword)]
-  	puts rows
-	
+  	puts keyword
+  	puts position_in_pages(keyword)
 end
